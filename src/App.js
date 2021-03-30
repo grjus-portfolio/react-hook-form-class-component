@@ -1,10 +1,13 @@
 import React from "react";
+import MainComponent from "./components/MainContainer"
 
 
 function App() {
   return (
-    <div>
-    </div>
+    <MainComponent title="Input data">
+      asasdasdas
+    </MainComponent>
+
   );
 }
 

@@ -10,7 +10,7 @@ class Delegate extends Component {
   render() {
     const { firstName, lastName, age, city, id } = this.props;
     return (
-      <div onClick={this.toggleDelegate} className="container">
+      <div data-key={id} onClick={this.props.onClick} className="container">
         <div className="person-container">
           <p className="person-data">{firstName}</p>
           <p className="person-data">{lastName}</p>

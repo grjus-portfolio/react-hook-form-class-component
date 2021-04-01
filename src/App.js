@@ -60,6 +60,7 @@ class App extends Component {
             />
           ))}
         </MainComponent>
+        <MainComponent title="Export delegates" />
       </>
     );
   }

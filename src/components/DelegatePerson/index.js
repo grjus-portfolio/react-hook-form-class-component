@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import "./style.css";
 
 class Delegate extends Component {
+  toggleDelegate = (e) => {
+    e.target.closest(".container").classList.toggle("strike");
+  };
+
   render() {
-    const { firstName, lastName, age, city } = this.props;
+    const { firstName, lastName, age, city, id } = this.props;
     return (
-      <div className="container">
+      <div onClick={this.toggleDelegate} className="container">
         <div className="person-container">
           <p className="person-data">{firstName}</p>
           <p className="person-data">{lastName}</p>
@@ -18,6 +23,7 @@ class Delegate extends Component {
 }
 
 Delegate.propTypes = {
+  id: PropTypes.number.isRequired,
   firstName: PropTypes.string.isRequired,
   lastName: PropTypes.string.isRequired,
   age: PropTypes.string.isRequired,
